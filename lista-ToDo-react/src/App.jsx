@@ -38,6 +38,13 @@ function App() {
     setTodos(newTodo);
   }
 
+  const removeTodo = (id) => {
+    const newTodo = [...todos]
+    const filteredTodo = newTodo.filter(todo => 
+      todo.id !== id ? todo : null)
+    setTodos(filteredTodo);
+  }
+
   return(
   <div className="app">
     <h1>Lista de Tarefas</h1>
